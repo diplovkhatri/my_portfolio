@@ -1,0 +1,198 @@
+  body,html{
+    margin: 0;
+    padding: 0;
+  }
+  img{
+    width: 100%;
+    height: 650px;
+  }
+  .caption{
+    color: black;
+    margin-bottom: 350px;
+    text-align: left;
+    letter-spacing: 0.2rem;
+    font-weight: 900;
+  } 
+  figcaption{
+    margin-top: 10px;
+    font-size: 14px;
+    letter-spacing: 0.1rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+  }
+  h2{
+    width: fit-content;
+    opacity: 0.7;
+  }
+  p{
+    font-size: 36px;
+    background-color: whitesmoke;
+  }
+  h3{
+    margin-top: 20px;
+    letter-spacing: 0.01rem;
+    margin-bottom: 60px;
+  }
+  h4{
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  h5{
+    font-size: small;
+    letter-spacing: 0.2rem;
+    opacity: 0.7;
+  }
+  h6{
+    letter-spacing: 0.1rem;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+  
+
+    /* hexagon shape */
+
+    .hexagon {
+      position: relative;
+      width: 90px; 
+      height: 51px;
+      font-size: 42px;
+      text-align: center;
+      line-height: 42px;
+      background-color: #5ca0ed;
+      z-index: 1;
+    }
+    .hexagon:before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #5ca0ed;
+      content: "";
+      transform: rotate(60deg);
+      z-index: -1;
+    }
+    .hexagon:after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #5ca0ed;
+      content: "";
+      transform: rotate(-60deg);
+      z-index: -1;
+    }
+    .hex2,.hex2::before,.hex2:after{
+      background-color: red;
+    }
+    .hex3,.hex3::before,.hex3:after{
+      background-color: gold;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /* timeline */
+    .timeline {
+      position: relative;
+     background-color: white;
+      margin: 0;
+    }
+    
+    /* The actual timeline (the vertical ruler) */
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: whitesmoke;
+      top: 15px;
+      bottom: 15px;
+      left: 8%;
+      margin-left: -3px;
+    }
+    
+    /* Container around content */
+    .container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+  
+    /* The circles on the timeline */
+    .container::after {
+      font-family: FontAwesome;
+      content:"\f040";
+      font-size: 28px;
+      text-align: center;
+      padding-bottom: 30px;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      left:3%;
+      background-color: white;
+      border: 4px solid green;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    
+    /* Place the container to the right */
+    .right {
+      left: 2.9%;
+    }
+    
+    /* Add arrows to the right container (pointing left) */
+    .right::before {
+      content: "";
+      position: absolute;
+      top: 28px;
+      width: 0;
+      z-index: 1;
+      border: medium solid white;
+    
+    }
+    
+    /* Fix the circle for containers on the right side */
+    .right::after {
+      left: -25px;
+    }
+    
+    /* The actual content */
+    .content {
+      padding: 20px 30px;
+      left: -7px;
+      width: 100%;
+      background-color: whitesmoke;
+      position: relative;
+      border-radius: 6px;
+    }
+    
+    
+      
+      /* Full-width containers */
+      .container {
+      width: 90%;
+      padding-left: 70px;
+      padding-right: 0px;
+      }
+      
+      /* Make sure that all arrows are pointing leftwards */
+      .container::before {
+      left: 53px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent rgb(248, 199, 199) transparent transparent;
+      }
+    
